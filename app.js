@@ -7,11 +7,14 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-let activityData;
+let activity="activity";
+let type = "type";
+let participants = "participants";
+let price = "price";
+let accessibility = "accessibility";
 
 app.get("/", (req,res)=>{
-    res.render("activity", {activity: activityData});
-    res.redirect("/");
+    res.render("activity", {activity: activity,type : type,participants: participants,price: price, accessibility : accessibility});
 });
 
 app.post("/", (req,res)=>{
@@ -23,7 +26,33 @@ app.post("/", (req,res)=>{
     http.get(url, (response)=>{
         response.on("data", (data)=>{
             const activityList = JSON.parse(data);
-            activityData = activityList.activity;
+            activity = activityList.activity;
+            type = activityList.type;
+            participants = activityList.participants;
+            if(activityList.price == 0)
+            {
+                price = "Free";
+            }
+            else if(activityList.price <= 0.5)
+            {
+                price = "Inexpensive";
+            }
+            else {
+                price = "Afordable";
+            }
+
+        if(activityList.accessibility == 0)
+        {
+            accessibility = "At Hand";
+        }
+        else if(activityList.accessibility <= 0.5)
+        {
+            accessibility = "Available";
+        }
+        else{
+            accessibility = "Challenging";
+        }
+           
            res.redirect("/"); 
         });
     });

@@ -8,19 +8,47 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
+<br><br><center>
 <div class="box" id="heading">
-    <h1>Do an Instant Activity</h1>
-</div>
+    <h1>Are you bored?&#x1F635;</h1>
+    <p>Let's find you something to do</p>
+</div></center>
+<center><br><br><br><br><br>
 <div>    
 <form action="/" method="post" class="item">
 <input id = "typeInput" type="text" name="typeName" placeholder="Enter Type"> 
 <button type="submit">Do it Now</button> 
 </form>
-</div>
+</div> </center>
 
-<div id="results" ><p><%= activity %></p></div> 
-</div>
+<br><br><br><br><br>
+<center>
+<div class="note">
+
+        <table>
+            <tr>
+                <td><img src="https://img.icons8.com/fluency/48/000000/shortcuts.png" height="30px" width="30px"/></td>
+                <td><h2>  <%=type %></h2></td>
+            </tr>
+            <tr>
+                <td> <img src="https://img.icons8.com/fluency/48/000000/modern-art.png" height="30px" width="30px"/> </td>
+                <td><h2><%= activity%></h2></td>
+            </tr>
+            <tr>
+                <td> <img src="https://img.icons8.com/fluency/48/000000/user-group-man-woman.png" height="30px" width="30px"/></td>
+                <td> <h2><%= participants %></h2></td>
+            </tr>
+            <tr>
+                <td> <img src="https://img.icons8.com/fluency/48/000000/expensive-2.png" height="30px" width="30px" /></td>
+                <td> <h2>  <%= price %></h2></td>
+            </tr>
+            <tr>
+                <td><img src="https://img.icons8.com/fluency/48/000000/accessibility2.png" height="30px" width="30px"/></td>
+                <td> <h2>  <%= accessibility %></h2></td>
+            </tr>
+        </table> 
+</div> </center>
+
 </body>
 </html>
 
