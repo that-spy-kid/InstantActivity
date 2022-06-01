@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 let activity="activity";
-let type = "type";
+let type = "tag";
 let participants = "participants";
 let price = "price";
 let accessibility = "accessibility";
@@ -61,6 +61,6 @@ app.post("/", (req,res)=>{
 
 
 
-app.listen(3000, ()=>{
+app.listen( process.env.PORT || 3000 , ()=>{
     console.log("server is running on port 3000");
 });

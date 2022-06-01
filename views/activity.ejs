@@ -1,57 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instant Activity</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">   
 </head>
+
 <body>
-<br><br><center>
-<div class="box" id="heading">
-    <h1>Are you bored?&#x1F635;</h1>
-    <p>Let's find you something to do</p>
-</div></center>
-<center><br><br><br><br><br>
-<div>    
-<form action="/" method="post" class="item">
-<input id = "typeInput" type="text" name="typeName" placeholder="Enter Type"> 
-<button type="submit">Do it Now</button> 
-</form>
-</div> </center>
+    <div class="abc">
+        <div class="xyz" id="pqr">
+            <br>
+            <center>
+                <div class="box" id="heading">
+                    <h1 style="font-family: 'Courier New', Courier, monospace;">Are you bored?&#x1F635;</h1>
+                    <p style="font-family: 'Courier New', Courier, monospace;">Let's find you something fun 	&#128512;</p>
+                </div>
+            </center>
+            <center><br><br>
+                <div>
+                    <form action="/" method="post" class="item" id="pqr">
+                        <input class="txt" id="typeInput" type="text" name="typeName" placeholder="Enter Tag" style="font-family:'Courier New', Courier, monospace;">&nbsp;
+                        <button class='btn' type="submit">Do it Now</button>
+                    </form>
+                </div>
+            </center>
 
-<br><br><br><br><br>
-<center>
-<div class="note">
+            <br><br><br>
+            <center>
+                <div class="note">
 
-        <table>
-            <tr>
-                <td><img src="https://img.icons8.com/fluency/48/000000/shortcuts.png" height="30px" width="30px"/></td>
-                <td><h2>  <%=type %></h2></td>
-            </tr>
-            <tr>
-                <td> <img src="https://img.icons8.com/fluency/48/000000/modern-art.png" height="30px" width="30px"/> </td>
-                <td><h2><%= activity%></h2></td>
-            </tr>
-            <tr>
-                <td> <img src="https://img.icons8.com/fluency/48/000000/user-group-man-woman.png" height="30px" width="30px"/></td>
-                <td> <h2><%= participants %></h2></td>
-            </tr>
-            <tr>
-                <td> <img src="https://img.icons8.com/fluency/48/000000/expensive-2.png" height="30px" width="30px" /></td>
-                <td> <h2>  <%= price %></h2></td>
-            </tr>
-            <tr>
-                <td><img src="https://img.icons8.com/fluency/48/000000/accessibility2.png" height="30px" width="30px"/></td>
-                <td> <h2>  <%= accessibility %></h2></td>
-            </tr>
-        </table> 
-</div> </center>
+                    <table>
+                        <tr>
+                            <td><img src="https://img.icons8.com/fluency/48/000000/shortcuts.png" height="30px" width="30px" /></td>
+                            <td>
+                                <p>
+                                    <%=type %>
+                                <p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <img src="https://img.icons8.com/fluency/48/000000/modern-art.png" height="30px" width="30px" /> </td>
+                            <td>
+                                <p>
+                                    <%= activity%>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <img src="https://img.icons8.com/fluency/48/000000/user-group-man-woman.png" height="30px" width="30px" /></td>
+                            <td>
+                                <p>
+                                    <%= participants %>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <img src="https://img.icons8.com/fluency/48/000000/expensive-2.png" height="30px" width="30px" /></td>
+                            <td>
+                                <p>
+                                    <%= price %>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.icons8.com/fluency/48/000000/accessibility2.png" height="30px" width="30px" /></td>
+                            <td>
+                                <p>
+                                    <%= accessibility %>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </center>
+        </div>
+          <div class="tag">
+              <h3>Suggested &#x23;Tags </h3>
+              <table>
+                  <tr>
+                    <h5>#education</h5></td> 
+                  </tr>
+                  <tr>
+                    <h5>#diy</h5>
+                  </tr>
+                  <tr>
+                    <h5>#social</h5>
+                  </tr>
+                  <tr>
+                    <h5>#recreational</h5>  
+                  </tr>
+                  <tr>
+                    <h5>#busywork</h5>
+                  </tr>
+                  <tr>
+                    <h5>#music</h5>
+                  </tr>
+                  <tr>
+                    <h5>#cooking</h5>
+                  </tr>
+                  <tr>
+                    <h5>#relaxation</h5>
+                  </tr>
+              </table>
+          </div>
+    </div>
+    
 
 </body>
+
 </html>
-
-
-
-
