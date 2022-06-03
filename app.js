@@ -12,7 +12,7 @@ let type = "tag";
 let participants = "participants";
 let price = "price";
 let accessibility = "accessibility";
-let link = "Find me";
+let link = "";
 
 app.get("/", (req,res)=>{
     res.render("activity", {activity: activity,type : type,participants: participants,price: price, accessibility : accessibility , link: link});
