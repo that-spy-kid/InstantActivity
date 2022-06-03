@@ -140,9 +140,17 @@ div {
 .tag{
   box-shadow:  0 0 6px rgb(86, 80, 80);
   border-radius: 10px;
-
-  
 }
+
+td a {
+  text-decoration: none;
+  color: #000000;
+}
+a:hover{
+  color: rgb(6, 221, 150);
+}
+
+
 
 
 

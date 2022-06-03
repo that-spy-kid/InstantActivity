@@ -12,9 +12,10 @@ let type = "tag";
 let participants = "participants";
 let price = "price";
 let accessibility = "accessibility";
+let link = "Find me";
 
 app.get("/", (req,res)=>{
-    res.render("activity", {activity: activity,type : type,participants: participants,price: price, accessibility : accessibility});
+    res.render("activity", {activity: activity,type : type,participants: participants,price: price, accessibility : accessibility , link: link});
 });
 
 app.post("/", (req,res)=>{
@@ -29,6 +30,7 @@ app.post("/", (req,res)=>{
             activity = activityList.activity;
             type = activityList.type;
             participants = activityList.participants;
+            // link = activityList.link;
             if(activityList.price == 0)
             {
                 price = "Free";
@@ -52,7 +54,20 @@ app.post("/", (req,res)=>{
         else{
             accessibility = "Challenging";
         }
-           
+        if(activityList.link === "")
+        {
+             var act = activityList.activity;
+             const arr = act.split(" ");
+             var temp = "", i;
+             for (i=0;i<arr.length-1; i++)
+             {
+                 temp += arr[i] + "+";
+             }
+             temp += arr[i];
+             link = "https://www.google.com/search?q=" + temp; 
+        } else {
+            link = activityList.link;
+        }
            res.redirect("/"); 
         });
     });
