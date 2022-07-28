@@ -1,3 +1,4 @@
+// Create Server
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -8,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 let activity="activity";
-let type = "tag";
+let type = "tag";      
 let participants = "participants";
 let price = "price";
 let accessibility = "accessibility";
@@ -20,17 +21,17 @@ app.get("/", (req,res)=>{
 
 app.post("/", (req,res)=>{
      
-    const querry = req.body.typeName;
+    const querry = req.body.typeName.toLowerCase();
     const url = "http://www.boredapi.com/api/activity?type=" + querry;
-    
-    
+
     http.get(url, (response)=>{
         response.on("data", (data)=>{
             const activityList = JSON.parse(data);
             activity = activityList.activity;
             type = activityList.type;
             participants = activityList.participants;
-            // link = activityList.link;
+        
+            link = activityList.link;
             if(activityList.price == 0)
             {
                 price = "Free";
@@ -54,7 +55,7 @@ app.post("/", (req,res)=>{
         else{
             accessibility = "Challenging";
         }
-        if(activityList.link === "")
+        if(activityList.link === ""  )
         {
              var act = activityList.activity;
              const arr = act.split(" ");
